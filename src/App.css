@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sub-container {
+    width: 300px;
+    min-width: 300px;
+    padding: 20px;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    border: #eeaeca solid 1px;
+    border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-box {
+    width: 300px;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-box > input {
+    width: 100%;
+    height: 30px;
+    text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+.keypad {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keypad-row {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.keypad-row > button {
+    width: 20%;
+    height: 50px;
+    background-color: #bfd1e7;
+    border: #eeaeca solid 1px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgb(44, 43, 43);
+    outline: none;
+    transition: 0.2s all;
+}
+
+.keypad-row > button:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 4px 4px 10px rgb(44, 43, 43);
+    /* Lowering the shadow */
+}
+
+.input-exp {
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    caret-color: black;
+}
+
+.input-exp:focus {
+    border: none;
+    outline: none;
+}
+
+.result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 30px;
 }
